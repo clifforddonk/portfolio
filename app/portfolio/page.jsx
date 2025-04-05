@@ -79,14 +79,14 @@ export default function Home() {
   ];
 
   const skills = [
-    { name: "JavaScript", level: 90 },
-    { name: "React", level: 85 },
-    { name: "Next.js", level: 80 },
-    { name: "Git", level: 75 },
+    { name: "JavaScript", level: 70 },
     { name: "Java(SpringBoot)", level: 70 },
-    { name: "MongoDB", level: 75 },
-    { name: "MySQL", level: 85 },
-    { name: "REST Api", level: 95 },
+    { name: "React", level: 70 },
+    { name: "Next.js", level: 70 },
+    { name: "MongoDB", level: 70 },
+    { name: "MySQL", level: 70 },
+    { name: "Git", level: 70 },
+    { name: "REST API", level: 70 },
   ];
 
   const filteredProjects =
@@ -131,10 +131,12 @@ export default function Home() {
               <div className="md:w-2/3">
                 <p className="text-lg text-gray-700 mb-6">
                   I'm a passionate Full Stack Developer with expertise in
-                  building modern web applications. With over X years of
+                  building modern web applications. With over 2 years of
                   experience in the industry, I've worked on various projects
                   ranging from small business websites to complex enterprise
-                  applications.
+                  applications. I am currently a student at the University of
+                  Mines and Technology, where I'm furthering my technical
+                  knowledge and skills.
                 </p>
                 <p className="text-lg text-gray-700 mb-6">
                   My approach to development focuses on creating clean,
