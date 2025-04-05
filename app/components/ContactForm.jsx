@@ -150,7 +150,7 @@ export default function ContactForm() {
                   </svg>
                 </a>
                 <a
-                  href="#"
+                  href="https://www.linkedin.com/in/clifford-donkor-1a2b3c"
                   className="bg-gray-200 p-3 rounded-full hover:bg-gray-300 transition"
                 >
                   <svg
