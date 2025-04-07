@@ -68,7 +68,7 @@ export default function Home() {
       category: "fullstack",
       technologies: ["Express", "MongoDB", "JWT", "Docker"],
       link: "https://event-pulse.com/",
-      code: "https://github.com/clifforddonk/blogsite_backend",
+      code: "",
     },
     {
       id: 6,
