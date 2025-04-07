@@ -28,7 +28,7 @@ export default function ProjectCard({ project }) {
       </div>
       <div className="p-6">
         <h3 className="font-bold text-xl mb-2">{project.title}</h3>
-        <p className="text-gray-600 mb-4 line-clamp-2">{project.description}</p>
+        <p className="text-gray-600 mb-4 line-clamp-3">{project.description}</p>
         <div className="flex space-x-3">
           {project.link && (
             <motion.a

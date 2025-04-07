@@ -18,63 +18,68 @@ export default function Home() {
     {
       id: 1,
       title: "Byteblogg",
-      description: "A full-stack e-commerce solution with payment integration",
+      description:
+        "A dynamic blog platform built for seamless content publishing and user engagement.",
       image: "/byteblogg1.png",
       category: "fullstack",
       technologies: ["Next.js", "SpringBoot", "MongoDB"],
       link: "https://byteblogg.vercel.app/",
-      code: "https://github.com/clifforddonk/blogsite_frontend",
+      code: "https://github.com/clifforddonk/blogsite_backend",
     },
     {
       id: 2,
-      title: "African Youth Festival Portal ",
-      description: "Real-time weather application with interactive maps",
+      title: "African Youth Festival Portal",
+      description:
+        "Application portal for the Africa Youth Festival 2025, designed for a smooth and intuitive registration experience.",
       image: "/ayf.png",
       category: "fullstack",
       technologies: ["Next.js", "MongoDB"],
       link: "https://apply.africayouthfest.org/",
-      code: "",
+      code: "https://github.com/charlesbihdev/ayf-portal",
     },
     {
       id: 3,
-
       title: "ChoDelivery",
-      description: "Food Ordering System",
+      description:
+        "A modern food delivery system offering an efficient and responsive ordering experience.",
       image: "/cho.png",
       category: "frontend",
       technologies: ["Next.js", "Laravel"],
       link: "https://chodelivery.com/",
-      code: "",
+      code: "https://github.com/charlesbihdev/cho",
     },
     {
       id: 4,
       title: "Mattress Home",
-      description: "Personal portfolio site built with Next.js",
+      description:
+        "An e-commerce platform tailored for mattress and bedding products, designed to provide a cozy shopping journey.",
       image: "/mh.png",
       category: "fullstack",
       technologies: ["Next.js", "Php"],
       link: "https://mattresshome.netlify.app/",
-      code: "",
+      code: "https://github.com/charlesbihdev/MATTRESS-HOME",
     },
     {
       id: 5,
       title: "Event-Pulse",
-      description: "RESTful API for task management with authentication",
+      description:
+        "A full-featured event management and ticketing platform with robust backend architecture and user authentication.",
       image: "/event-pulse.png",
       category: "fullstack",
       technologies: ["Express", "MongoDB", "JWT", "Docker"],
       link: "https://event-pulse.com/",
-      code: "",
+      code: "https://github.com/clifforddonk/blogsite_backend",
     },
     {
       id: 6,
       title: "Portfolio Website",
-      description: "Personal portfolio site built with Next.js",
+      description:
+        "A sleek and responsive personal portfolio showcasing my projects, skills, and journey as a developer.",
       image: "/port.png",
       category: "frontend",
       technologies: ["Next.js", "Tailwind CSS", "Framer Motion"],
-      link: "",
-      code: "",
+      link: "https://clifforddonk.vercel.app/",
+      code: "https://github.com/clifforddonk/portfolio",
     },
   ];
 
