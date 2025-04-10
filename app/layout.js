@@ -1,4 +1,5 @@
 import { Nunito } from "next/font/google";
+import { ThemeProvider } from "next-themes";
 import "./globals.css";
 
 const nunito = Nunito({
@@ -16,7 +17,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${nunito.variable} font-sans antialiased`}>
-        {children}
+        <ThemeProvider attribute="class">{children}</ThemeProvider>
       </body>
     </html>
   );
