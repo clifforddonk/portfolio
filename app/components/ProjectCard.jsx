@@ -1,9 +1,15 @@
 import { motion } from "framer-motion";
+import { useTheme } from "next-themes";
+
 export default function ProjectCard({ project }) {
+  const { theme } = useTheme();
+
   return (
     <motion.div
       whileHover={{ y: -10 }}
-      className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300"
+      className={`rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 ${
+        theme === "dark" ? "bg-gray-800 border border-gray-700" : "bg-white"
+      }`}
     >
       <div className="h-56 overflow-hidden relative">
         <img
@@ -17,7 +23,11 @@ export default function ProjectCard({ project }) {
               {project.technologies.map((tech, i) => (
                 <span
                   key={i}
-                  className="bg-white/20 backdrop-blur-sm text-xs px-3 py-1 rounded-full text-white"
+                  className={`text-xs px-3 py-1 rounded-full text-white ${
+                    theme === "dark"
+                      ? "bg-indigo-900/60 backdrop-blur-sm"
+                      : "bg-white/20 backdrop-blur-sm"
+                  }`}
                 >
                   {tech}
                 </span>
@@ -27,15 +37,31 @@ export default function ProjectCard({ project }) {
         </div>
       </div>
       <div className="p-6">
-        <h3 className="font-bold text-xl mb-2">{project.title}</h3>
-        <p className="text-gray-600 mb-4 line-clamp-3">{project.description}</p>
+        <h3
+          className={`font-bold text-xl mb-2 ${
+            theme === "dark" ? "text-white" : ""
+          }`}
+        >
+          {project.title}
+        </h3>
+        <p
+          className={`mb-4 line-clamp-3 ${
+            theme === "dark" ? "text-gray-300" : "text-gray-600"
+          }`}
+        >
+          {project.description}
+        </p>
         <div className="flex space-x-3">
           {project.link && (
             <motion.a
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               href={project.link}
-              className="bg-indigo-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-indigo-700 transition"
+              className={`px-4 py-2 rounded-md text-sm font-medium transition ${
+                theme === "dark"
+                  ? "bg-indigo-500 text-white hover:bg-indigo-600"
+                  : "bg-indigo-600 text-white hover:bg-indigo-700"
+              }`}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -47,7 +73,11 @@ export default function ProjectCard({ project }) {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               href={project.code}
-              className="border border-indigo-600 text-indigo-600 px-4 py-2 rounded-md text-sm font-medium hover:bg-indigo-50 transition"
+              className={`px-4 py-2 rounded-md text-sm font-medium transition ${
+                theme === "dark"
+                  ? "border border-indigo-400 text-indigo-300 hover:bg-indigo-900/30"
+                  : "border border-indigo-600 text-indigo-600 hover:bg-indigo-50"
+              }`}
               target="_blank"
               rel="noopener noreferrer"
             >
