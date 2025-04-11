@@ -10,7 +10,9 @@ body {
   background: var(--background);
   font-family: var(--font-nunito), Arial, Helvetica, sans-serif;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 @keyframes bounce {
   0%,
   80%,
