@@ -53,7 +53,11 @@ export default function WhatIDo() {
       icon: (
         <span className="flex items-center justify-center w-12 h-12 rounded-md ">
           <span className="flex items-center justify-center w-12 h-12 rounded-md ">
-            <img className="w-10 h-10" src="/front.png" alt="Backend" />
+            <img
+              className="w-10 h-10"
+              src="/skill-icons/front.png"
+              alt="Backend"
+            />
           </span>
         </span>
       ),
@@ -64,7 +68,11 @@ export default function WhatIDo() {
     {
       icon: (
         <span className="flex items-center justify-center w-12 h-12 rounded-md ">
-          <img className="w-10 h-10" src="/backend.png" alt="Backend" />
+          <img
+            className="w-10 h-10"
+            src="/skill-icons/backend.png"
+            alt="Backend"
+          />
         </span>
       ),
       title: "Backend Development",
@@ -75,7 +83,11 @@ export default function WhatIDo() {
       icon: (
         <span className="flex items-center justify-center w-12 h-12 rounded-md ">
           <span className="flex items-center justify-center w-12 h-12 rounded-md ">
-            <img className="w-14 h-14" src="/web.png" alt="Backend" />
+            <img
+              className="w-14 h-14"
+              src="/skill-icons/web.png"
+              alt="Backend"
+            />
           </span>
         </span>
       ),
@@ -89,7 +101,11 @@ export default function WhatIDo() {
         <span className="flex items-center justify-center w-12 h-12 rounded-md ">
           <span className="flex items-center justify-center w-12 h-12 rounded-md ">
             <span className="flex items-center justify-center w-12 h-12 rounded-md ">
-              <img className="w-15 h-16" src="/full.png" alt="Backend" />
+              <img
+                className="w-15 h-16"
+                src="/skill-icons/full.png"
+                alt="Backend"
+              />
             </span>
           </span>
         </span>
