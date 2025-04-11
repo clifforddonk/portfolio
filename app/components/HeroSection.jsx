@@ -97,7 +97,7 @@ export default function HeroSection() {
             >
               <div className="w-full h-full rounded-full overflow-hidden relative">
                 <img
-                  src="/passport pic.jpg"
+                  src="/personal/passport pic.jpg"
                   alt="Clifford Donkor"
                   className="object-cover w-full h-full"
                 />
