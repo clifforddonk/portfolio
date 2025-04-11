@@ -15,10 +15,12 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={`${nunito.variable} font-sans antialiased`}>
-        <ThemeProvider attribute="class">{children}</ThemeProvider>
-      </body>
-    </html>
+    <ThemeProvider attribute="class">
+      {" "}
+      {/* ✅ Moved outside <html> */}
+      <html lang="en" className={nunito.variable}>
+        <body className="font-sans antialiased">{children}</body>
+      </html>
+    </ThemeProvider>
   );
 }
