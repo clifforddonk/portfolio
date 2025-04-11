@@ -22,8 +22,11 @@ export default function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9 }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Hi, I'm{" "}
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 ">
+              <span className={`${theme === "dark" && "text-indigo-300"}`}>
+                {" "}
+                Hi, I'm{" "}
+              </span>
               <span
                 className={`${
                   theme === "dark" ? "text-indigo-300" : "text-yellow-300"
