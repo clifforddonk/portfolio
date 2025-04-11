@@ -12,14 +12,14 @@ export default function SkillBar({ skills }) {
   // Get appropriate icon based on skill name
   const getSkillIcon = (skillName) => {
     const name = skillName.toLowerCase();
-    if (name.includes("react")) return "/react.png";
-    if (name.includes("javascript")) return "/js.png";
-    if (name.includes("git")) return "/git.png";
-    if (name.includes("next")) return "/next.png";
-    if (name.includes("rest")) return "/rest.png";
-    if (name.includes("sql")) return "/sql.png";
-    if (name.includes("spring")) return "/spring.png";
-    if (name.includes("mongo")) return "/mongo.png";
+    if (name.includes("react")) return "/skill-icons/react.png";
+    if (name.includes("javascript")) return "/skill-icons/js.png";
+    if (name.includes("git")) return "/skill-icons/git.png";
+    if (name.includes("next")) return "/skill-icons/next.png";
+    if (name.includes("rest")) return "/skill-icons/rest.png";
+    if (name.includes("sql")) return "/skill-icons/sql.png";
+    if (name.includes("spring")) return "/skill-icons/spring.png";
+    if (name.includes("mongo")) return "/skill-icons/mongo.png";
 
     return "⭐"; // Default icon
   };
