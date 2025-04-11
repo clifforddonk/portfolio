@@ -197,7 +197,7 @@ export default function Home() {
                   continuously learning new technologies.
                 </p>
                 <div className="">
-                  <a
+                  {/* <a
                     href="#"
                     className={`px-4 py-2 rounded-full transition ${
                       theme === "dark"
@@ -206,7 +206,7 @@ export default function Home() {
                     }`}
                   >
                     Download Resume
-                  </a>
+                  </a> */}
                 </div>
               </div>
             </div>
