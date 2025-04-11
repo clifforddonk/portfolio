@@ -29,7 +29,7 @@ export default function Home() {
       title: "Byteblogg",
       description:
         "A dynamic blog platform built for seamless content publishing and user engagement.",
-      image: "/byteblogg1.png",
+      image: "/projects/byteblogg1.png",
       category: "fullstack",
       technologies: ["Next.js", "SpringBoot", "MongoDB"],
       link: "https://byteblogg.vercel.app/",
@@ -40,7 +40,7 @@ export default function Home() {
       title: "African Youth Festival Portal",
       description:
         "Application portal for the Africa Youth Festival 2025, designed for a smooth and intuitive registration experience.",
-      image: "/ayf.png",
+      image: "/projects/ayf.png",
       category: "fullstack",
       technologies: ["Next.js", "MongoDB"],
       link: "https://apply.africayouthfest.org/",
@@ -51,7 +51,7 @@ export default function Home() {
       title: "ChoDelivery",
       description:
         "A modern food delivery system offering an efficient and responsive ordering experience.",
-      image: "/cho.png",
+      image: "/projects/cho.png",
       category: "frontend",
       technologies: ["Next.js", "Laravel"],
       link: "https://chodelivery.com/",
@@ -62,7 +62,7 @@ export default function Home() {
       title: "Mattress Home",
       description:
         "An e-commerce platform tailored for mattress and bedding products, designed to provide a cozy shopping journey.",
-      image: "/mh.png",
+      image: "/projects/mh.png",
       category: "fullstack",
       technologies: ["Next.js", "Php"],
       link: "https://mattresshome.netlify.app/",
@@ -73,7 +73,7 @@ export default function Home() {
       title: "Event-Pulse",
       description:
         "A full-featured event management and ticketing platform with robust backend architecture and user authentication.",
-      image: "/event-pulse.png",
+      image: "/projects/event-pulse.png",
       category: "fullstack",
       technologies: ["Express", "MongoDB", "JWT", "Docker"],
       link: "https://event-pulse.com/",
@@ -84,7 +84,7 @@ export default function Home() {
       title: "Portfolio Website",
       description:
         "A sleek and responsive personal portfolio showcasing my projects, skills, and journey as a developer.",
-      image: "/port.png",
+      image: "/projects/port.png",
       category: "frontend",
       technologies: ["Next.js", "Tailwind CSS", "Framer Motion"],
       link: "https://clifforddonk.vercel.app/",
@@ -169,7 +169,7 @@ export default function Home() {
                       : "bg-gray-100"
                   } h-80 flex items-center justify-center`}
                 >
-                  <img src="/profile.jpg" alt="About Image" />
+                  <img src="/personal/profile.jpg" alt="About Image" />
                 </div>
               </div>
               <div className="md:w-2/3">
