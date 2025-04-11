@@ -27,7 +27,7 @@ export default function NavBar() {
         scrolled
           ? "bg-white/90 dark:bg-gray-900/95 backdrop-blur-sm shadow-md dark:shadow-gray-800/10"
           : "bg-transparent"
-      } sticky top-0 z-50 transition-all duration-300 border-b border-gray-100 dark:border-gray-800`}
+      } sticky top-0 z-50 transition-all duration-300  border-gray-100 dark:border-gray-800`}
     >
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
         <motion.h1

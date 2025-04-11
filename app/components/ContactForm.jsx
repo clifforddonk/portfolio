@@ -248,7 +248,7 @@ export default function ContactForm() {
               </h3>
               <div className="flex space-x-5">
                 <motion.a
-                  href="www.linkedin.com/in/clifford-donkor-1a2b3c"
+                  href="https://linkedin.com/in/clifford-donkor-1a2b3c"
                   target="_blank"
                   whileHover={{ y: -3 }}
                   className={`text-2xl ${
