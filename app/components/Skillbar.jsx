@@ -1,3 +1,4 @@
+"use client";
 import { motion, useInView } from "framer-motion";
 import { useState, useEffect, useRef } from "react";
 import { useTheme } from "next-themes";
@@ -18,20 +19,26 @@ export default function SkillBar({ skills }) {
       whileHover={{ y: -5 }}
     >
       <div className="flex justify-between mb-2">
-        <span className={`font-medium ${
-          theme === "dark" ? "text-gray-200" : "text-gray-700"
-        }`}>
+        <span
+          className={`font-medium ${
+            theme === "dark" ? "text-gray-200" : "text-gray-700"
+          }`}
+        >
           {skills.name}
         </span>
-        <span className={`text-sm ${
-          theme === "dark" ? "text-gray-400" : "text-gray-500"
-        }`}>
+        <span
+          className={`text-sm ${
+            theme === "dark" ? "text-gray-400" : "text-gray-500"
+          }`}
+        >
           {skills.level}%
         </span>
       </div>
-      <div className={`w-full rounded-full h-2.5 ${
-        theme === "dark" ? "bg-gray-700" : "bg-gray-200"
-      }`}>
+      <div
+        className={`w-full rounded-full h-2.5 ${
+          theme === "dark" ? "bg-gray-700" : "bg-gray-200"
+        }`}
+      >
         <motion.div
           className={`h-2.5 rounded-full ${
             theme === "dark"
