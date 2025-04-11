@@ -11,6 +11,7 @@ import Skillbar from "../components/Skillbar";
 import ProjectCard from "../components/ProjectCard";
 import ContactForm from "../components/ContactForm";
 import Footer from "../components/Footer";
+import WhatIDo from "../components/Duties";
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState("all");
@@ -92,13 +93,13 @@ export default function Home() {
   ];
 
   const skills = [
-    { name: "JavaScript", level: 70 },
-    { name: "Java(SpringBoot)", level: 70 },
-    { name: "React", level: 70 },
+    { name: "JavaScript", level: 80 },
+    { name: "React", level: 85 },
+    { name: "Java(SpringBoot)", level: 60 },
     { name: "Next.js", level: 70 },
     { name: "MongoDB", level: 70 },
     { name: "MySQL", level: 70 },
-    { name: "Git", level: 70 },
+    { name: "Git", level: 80 },
     { name: "REST API", level: 70 },
   ];
 
@@ -195,7 +196,7 @@ export default function Home() {
                   user experiences. I enjoy solving complex problems and
                   continuously learning new technologies.
                 </p>
-                <div className="flex flex-wrap gap-3">
+                <div className="">
                   <a
                     href="#"
                     className={`px-4 py-2 rounded-full transition ${
@@ -206,26 +207,6 @@ export default function Home() {
                   >
                     Download Resume
                   </a>
-                  <a
-                    href="https://github.com/clifforddonk"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`px-4 py-2 rounded-full transition ${
-                      theme === "dark"
-                        ? "bg-gray-700 text-white hover:bg-gray-600"
-                        : "bg-gray-800 text-white hover:bg-gray-700"
-                    }`}
-                  >
-                    GitHub
-                  </a>
-                  <a
-                    href="https://www.linkedin.com/in/clifford-donkor-1a2b3c"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition"
-                  >
-                    LinkedIn
-                  </a>
                 </div>
               </div>
             </div>
@@ -233,9 +214,12 @@ export default function Home() {
         </motion.div>
       </FadeInSection>
 
+      {/* What I Do Section */}
+      <div id="skills">
+        <WhatIDo />
+      </div>
       {/* Skills Section */}
       <FadeInSection
-        id="skills"
         className={`py-20 ${theme === "dark" ? "bg-gray-900" : "bg-gray-50"}`}
       >
         <div className="container mx-auto px-4">
@@ -244,7 +228,7 @@ export default function Home() {
               theme === "dark" ? "text-white" : ""
             }`}
           >
-            My Skills
+            Tech Stack
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
             {skills.map((skill, index) => (
