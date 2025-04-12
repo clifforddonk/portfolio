@@ -77,7 +77,7 @@ export default function ContactForm() {
                 }`}
               >
                 Email
-              </label>
+              </label> 
               <input
                 type="email"
                 id="email"
