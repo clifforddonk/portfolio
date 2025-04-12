@@ -39,9 +39,9 @@ export default function ContactForm() {
         Get In Touch
       </motion.h2>
 
-      <div className="flex flex-col md:flex-row gap-12 max-w-5xl mx-auto">
+      <div className="flex flex-col md:flex-row justify-center gap-12 max-w-5xl mx-auto">
         {/* Contact Form */}
-        <motion.div
+        {/* <motion.div
           className="md:w-1/2"
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
@@ -124,7 +124,7 @@ export default function ContactForm() {
               Send Message
             </motion.button>
           </form>
-        </motion.div>
+        </motion.div> */}
 
         {/* Contact Information */}
         <motion.div
@@ -248,7 +248,7 @@ export default function ContactForm() {
               </h3>
               <div className="flex space-x-5">
                 <motion.a
-                  href="https://linkedin.com/in/clifford-donkor-1a2b3c"
+                  href="https://www.linkedin.com/in/clifford-donkor-1a2b3c"
                   target="_blank"
                   whileHover={{ y: -3 }}
                   className={`text-2xl ${
