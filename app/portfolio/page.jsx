@@ -4,14 +4,14 @@ import { useState, useEffect } from "react";
 import Head from "next/head";
 import { motion } from "framer-motion";
 import { useTheme } from "next-themes";
-import FadeInSection from "@/app/components/FadeInSection";
-import NavBar from "../components/NavBar";
+import FadeInSection from "@/app/components/layout/FadeInSection";
+import NavBar from "../components/layout/NavBar";
 import HeroSection from "../components/HeroSection";
 import Skillbar from "../components/Skillbar";
 import ProjectCard from "../components/ProjectCard";
 import ContactForm from "../components/ContactForm";
-import Footer from "../components/Footer";
-import WhatIDo from "../components/Duties";
+import Footer from "../components/layout/Footer";
+import WhatIDo from "../components/Services";
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState("all");
