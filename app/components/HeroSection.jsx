@@ -1,5 +1,5 @@
-import FadeInSection from "./FadeInSection";
-import TypewriterEffect from "./TypewriterEffect";
+import FadeInSection from "./layout/FadeInSection";
+import TypewriterEffect from "./layout/TypewriterEffect";
 import { motion } from "framer-motion";
 import { useTheme } from "next-themes";
 
