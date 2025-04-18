@@ -52,7 +52,7 @@ export default function Home() {
       description:
         "A modern food delivery system offering an efficient and responsive ordering experience.",
       image: "/projects/cho.png",
-      category: "frontend",
+      category: "fullstack",
       technologies: ["Next.js", "Laravel"],
       link: "https://chodelivery.com/",
       code: "https://github.com/charlesbihdev/cho",
