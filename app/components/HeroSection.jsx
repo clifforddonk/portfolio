@@ -38,8 +38,8 @@ export default function HeroSection() {
             <TypewriterEffect
               texts={[
                 "Full Stack Developer",
-                "UI/UX Enthusiast",
-                "Problem Solver",
+                "Turning Ideas Into Products",
+                "Code that Grows Businesses",
               ]}
               className={`text-2xl md:text-3xl mb-6 ${
                 theme === "dark" ? "text-indigo-200" : "text-white"
@@ -50,8 +50,10 @@ export default function HeroSection() {
                 theme === "dark" ? "text-gray-300" : "text-white"
               }`}
             >
-              I build exceptional digital experiences with modern technologies,
-              focusing on creating intuitive and responsive applications.
+              I build thoughtful digital solutions using modern technologies
+              like Next.js and Spring Boot—focused on crafting intuitive,
+              responsive, and accessible experiences that help people and
+              businesses grow.
             </p>
             <div className="flex space-x-4">
               <motion.a
