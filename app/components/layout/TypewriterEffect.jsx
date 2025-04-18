@@ -6,7 +6,7 @@ export default function TypewriterEffect({ texts, className }) {
   const [isDeleting, setIsDeleting] = useState(false);
 
   useEffect(() => {
-    const typeSpeed = isDeleting ? 50 : 150;
+    const typeSpeed = isDeleting ? 50 : 100;
 
     const timer = setTimeout(() => {
       const fullText = texts[currentTextIndex];
