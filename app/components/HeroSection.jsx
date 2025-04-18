@@ -78,7 +78,7 @@ export default function HeroSection() {
                     : "border border-white text-white hover:bg-white hover:text-indigo-600 hover:bg-opacity-10"
                 }`}
               >
-                View Work
+                Explore Projects
               </motion.a>
             </div>
           </motion.div>
