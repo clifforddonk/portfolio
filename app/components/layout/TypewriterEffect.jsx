@@ -34,7 +34,9 @@ export default function TypewriterEffect({ texts, className }) {
   return (
     <h3 className={className}>
       {currentText}
+
       <span className="animate-pulse">|</span>
     </h3>
+    
   );
 }
