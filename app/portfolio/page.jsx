@@ -219,7 +219,7 @@ export default function Home() {
         <WhatIDo />
       </div>
       {/* Skills Section */}
-      {/* <FadeInSection
+      <FadeInSection
         className={`py-20 ${theme === "dark" ? "bg-gray-900" : "bg-gray-50"}`}
       >
         <div className="container mx-auto px-4">
@@ -236,7 +236,7 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </FadeInSection> */}
+      </FadeInSection>
 
       {/* Projects Section */}
       <FadeInSection
