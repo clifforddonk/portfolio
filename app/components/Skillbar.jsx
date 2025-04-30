@@ -48,7 +48,7 @@ export default function SkillBar({ skills }) {
       onHoverEnd={() => setShowTooltip(false)}
     >
       {/* Tooltip */}
-      {showTooltip && (
+      {/* {showTooltip && (
         <motion.div
           className={`absolute -top-16 left-0 right-0 mx-auto w-48 p-2 rounded-md text-center text-sm z-10 ${
             theme === "dark"
@@ -61,7 +61,7 @@ export default function SkillBar({ skills }) {
           {getLevelCategory(skills.level)} level •{" "}
           {skills.experience || "2+ years experience"}
         </motion.div>
-      )}
+      )} */}
 
       <div className="flex items-center justify-between mb-3">
         <div className="flex items-center">
@@ -77,24 +77,24 @@ export default function SkillBar({ skills }) {
             {skills.name}
           </span>
         </div>
-        <span
+        {/* <span
           className={`text-sm font-mono ${
             theme === "dark" ? "text-gray-400" : "text-gray-500"
           }`}
         >
           {skills.level}%
-        </span>
+        </span> */}
       </div>
 
       {/* Progress bar container */}
-      <div
+      {/* <div
         className={`w-full rounded-full h-3 relative ${
           theme === "dark" ? "bg-gray-700" : "bg-gray-200"
         }`}
       >
         {/* Marker lines for progress reference */}
-        <div className="absolute inset-0 flex justify-between px-1">
-          {[25, 50, 75].map((mark) => (
+      {/* <div className="absolute inset-0 flex justify-between px-1"> */}
+      {/* {[25, 50, 75].map((mark) => (
             <div
               key={mark}
               className={`w-px h-3 ${
@@ -102,11 +102,11 @@ export default function SkillBar({ skills }) {
               }`}
               style={{ left: `${mark}%` }}
             />
-          ))}
-        </div>
+          ))} */}
+      {/* </div>  */}
 
-        {/* Animated progress bar */}
-        <motion.div
+      {/* Animated progress bar */}
+      {/* <motion.div
           className={`h-3 rounded-full ${
             theme === "dark"
               ? "bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"
@@ -127,7 +127,7 @@ export default function SkillBar({ skills }) {
           transition={{ duration: 1.2, delay: 0.2 }}
         >
           {/* Pulse animation */}
-          {skills.level > 70 && (
+      {/* {skills.level > 70 && (
             <motion.div
               className={`absolute right-0 top-0 h-3 w-3 rounded-full ${
                 theme === "dark" ? "bg-pink-400" : "bg-violet-400"
@@ -142,12 +142,12 @@ export default function SkillBar({ skills }) {
                 repeatType: "loop",
               }}
             />
-          )}
-        </motion.div>
-      </div>
+          )} */}
+      {/* </motion.div>  */}
+      {/* </div> */}
 
       {/* Skill level indicators */}
-      <div className="flex justify-between mt-1 px-1">
+      {/* <div className="flex justify-between mt-1 px-1">
         <span
           className={`text-xs ${
             theme === "dark" ? "text-gray-500" : "text-gray-400"
@@ -162,7 +162,7 @@ export default function SkillBar({ skills }) {
         >
           Expert
         </span>
-      </div>
+      </div> */}
     </motion.div>
   );
 }
