@@ -3,8 +3,13 @@ import { motion, useInView } from "framer-motion";
 import { useState, useRef } from "react";
 import { useTheme } from "next-themes";
 import { FaReact } from "react-icons/fa";
-import { FaJsSquare } from "react-icons/fa";
-import { RiNextjsFill } from "react-icons/ri";
+import { IoLogoJavascript } from "react-icons/io5";
+import { FaGitAlt } from "react-icons/fa";
+import { SiNextdotjs } from "react-icons/si";
+import { SiSpring } from "react-icons/si";
+import { SiMongodb } from "react-icons/si";
+import { GrMysql } from "react-icons/gr";
+import { FaJava } from "react-icons/fa";
 
 export default function SkillBar({ skills }) {
   const ref = useRef(null);
@@ -15,18 +20,24 @@ export default function SkillBar({ skills }) {
   // Get appropriate icon based on skill name
   const getSkillIcon = (skillName) => {
     const name = skillName.toLowerCase();
-    if (name.includes("react")) return "FaReact";
-    if (name.includes("javascript")) return "FaJsSquare";
-    if (name.includes("git")) return "RiNextjsFill";
-    if (name.includes("next")) return "FaReact";
-    if (name.includes("rest")) return "FaReact";
-    if (name.includes("sql")) return "FaReact";
-    if (name.includes("spring")) return "FaReact";
-    if (name.includes("mongo")) return "FaReact";
 
-    return "⭐"; // Default icon
+    if (name.includes("react")) return { Icon: FaReact, color: "#61DBFB" }; // React blue
+    if (name.includes("javascript"))
+      return { Icon: IoLogoJavascript, color: "#F7DF1E" }; // JS yellow
+    if (name.includes("git")) return { Icon: FaGitAlt, color: "#F1502F" }; // Git orange
+    if (name.includes("next"))
+      return {
+        Icon: SiNextdotjs,
+        color: theme === "dark" ? "#FFFFFF" : "#000000",
+      }; // Next.js white
+    if (name.includes("java")) return { Icon: FaJava, color: "#F1502f" }; // Same as React
+    if (name.includes("sql")) return { Icon: GrMysql, color: "#00758F" }; // MySQL blue
+    if (name.includes("spring")) return { Icon: SiSpring, color: "#6DB33F" }; // Spring green
+    if (name.includes("mongo")) return { Icon: SiMongodb, color: "#47A248" }; // Mongo green
+
+    return { Icon: null, color: "#ffffff" }; // Default fallback
   };
-  const Icon = getSkillIcon(skills.name);
+  const { Icon, color } = getSkillIcon(skills.name);
 
   // Calculate level category
   const getLevelCategory = (level) => {
@@ -69,7 +80,7 @@ export default function SkillBar({ skills }) {
 
       <div className="flex items-center justify-between mb-3">
         <div className="flex items-center">
-          <Icon className="text-xl  mr-2 w-6 h-6" />
+          {Icon && <Icon className="text-xl mr-2 w-8 h-8" style={{ color }} />}
           <span
             className={`font-medium ${
               theme === "dark" ? "text-gray-200" : "text-gray-700"
