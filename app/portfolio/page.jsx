@@ -95,12 +95,13 @@ export default function Home() {
   const skills = [
     { name: "JavaScript", level: 80 },
     { name: "React", level: 85 },
-    { name: "Java(SpringBoot)", level: 60 },
     { name: "Next.js", level: 70 },
+    { name: "Java", level: 70 },
+    { name: "SpringBoot", level: 60 },
     { name: "MongoDB", level: 70 },
     { name: "MySQL", level: 70 },
     { name: "Git", level: 80 },
-    { name: "REST API", level: 70 },
+    
   ];
 
   const filteredProjects =
@@ -230,7 +231,7 @@ export default function Home() {
           >
             Tech Stack
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+          <div className="grid grid-cols-3 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
             {skills.map((skill, index) => (
               <Skillbar key={index} skills={skill} />
             ))}
