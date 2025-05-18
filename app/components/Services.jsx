@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import { useTheme } from "next-themes";
 import { useState } from "react";
+import { FaLaptopCode, FaServer, FaGlobe, FaLayerGroup } from "react-icons/fa";
 
 const ServiceCard = ({ icon, title, description }) => {
   const { theme } = useTheme();
@@ -51,14 +52,8 @@ export default function WhatIDo() {
   const services = [
     {
       icon: (
-        <span className="flex items-center justify-center w-12 h-12 rounded-md ">
-          <span className="flex items-center justify-center w-12 h-12 rounded-md ">
-            <img
-              className="w-10 h-10"
-              src="/skill-icons/front.png"
-              alt="Backend"
-            />
-          </span>
+        <span className="flex items-center justify-center w-12 h-12 rounded-md text-indigo-500 dark:text-indigo-300">
+          <FaLaptopCode className="w-8 h-8" style={{ color: "#61DBFB" }} />
         </span>
       ),
       title: "Frontend Development",
@@ -67,12 +62,8 @@ export default function WhatIDo() {
     },
     {
       icon: (
-        <span className="flex items-center justify-center w-12 h-12 rounded-md ">
-          <img
-            className="w-10 h-10"
-            src="/skill-icons/backend.png"
-            alt="Backend"
-          />
+        <span className="flex items-center justify-center w-12 h-12 rounded-md text-green-600 dark:text-green-400">
+          <FaServer className="w-8 h-8" style={{ color: "#61DBFB" }} />
         </span>
       ),
       title: "Backend Development",
@@ -81,33 +72,18 @@ export default function WhatIDo() {
     },
     {
       icon: (
-        <span className="flex items-center justify-center w-12 h-12 rounded-md ">
-          <span className="flex items-center justify-center w-12 h-12 rounded-md ">
-            <img
-              className="w-14 h-14"
-              src="/skill-icons/web.png"
-              alt="Backend"
-            />
-          </span>
+        <span className="flex items-center justify-center w-12 h-12 rounded-md text-blue-500 dark:text-blue-300">
+          <FaGlobe className="w-8 h-8" style={{ color: "#61DBFB" }} />
         </span>
       ),
       title: "Web Development",
       description:
         "Creating responsive, user-friendly websites and web applications with modern technologies.",
     },
-
     {
       icon: (
-        <span className="flex items-center justify-center w-12 h-12 rounded-md ">
-          <span className="flex items-center justify-center w-12 h-12 rounded-md ">
-            <span className="flex items-center justify-center w-12 h-12 rounded-md ">
-              <img
-                className="w-15 h-16"
-                src="/skill-icons/full.png"
-                alt="Backend"
-              />
-            </span>
-          </span>
+        <span className="flex items-center justify-center w-12 h-12 rounded-md text-purple-500 dark:text-purple-300">
+          <FaLayerGroup className="w-8 h-8" style={{ color: "#61DBFB" }} />
         </span>
       ),
       title: "Full-Stack Development",
