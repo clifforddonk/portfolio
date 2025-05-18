@@ -231,7 +231,7 @@ export default function Home() {
           >
             Tech Stack
           </h2>
-          <div className="grid grid-cols-3 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
             {skills.map((skill, index) => (
               <Skillbar key={index} skills={skill} />
             ))}
