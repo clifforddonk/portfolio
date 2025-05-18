@@ -1,7 +1,8 @@
 "use client";
 import { motion } from "framer-motion";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useTheme } from "next-themes";
+import emailjs from "@emailjs/browser";
 import {
   FaTwitter,
   FaLinkedin,
@@ -14,10 +15,46 @@ import {
 export default function ContactForm() {
   const { theme } = useTheme();
   const [mounted, setMounted] = useState(false);
+  const formRef = useRef(null);
 
   useEffect(() => {
     setMounted(true);
+    emailjs.init(process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY); // Replace with your EmailJS public key
   }, []);
+
+  const handleSubmit = (e) => {
+    console.log("Form data:", formRef.current);
+    console.log("Env vars:", {
+      service: process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+      template: process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+      publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY,
+    });
+    if (!process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY) {
+      console.warn("Missing EmailJS public key");
+    }
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+        formRef.current,
+        {
+          publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY,
+        }
+      )
+
+      .then(
+        (result) => {
+          alert("Message sent successfully!");
+          formRef.current.reset();
+        },
+        (error) => {
+          console.error(error.text);
+          alert("Failed to send message. Please try again.");
+        }
+      );
+  };
 
   if (!mounted) return null;
 
@@ -41,13 +78,13 @@ export default function ContactForm() {
 
       <div className="flex flex-col md:flex-row justify-center gap-12 max-w-5xl mx-auto">
         {/* Contact Form */}
-        {/* <motion.div
+        <motion.div
           className="md:w-1/2"
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          <form className="space-y-6">
+          <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
             <div>
               <label
                 htmlFor="name"
@@ -60,6 +97,8 @@ export default function ContactForm() {
               <input
                 type="text"
                 id="name"
+                name="user_name"
+                required
                 className={`w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 ${
                   theme === "dark"
                     ? "bg-gray-800 border-gray-700 text-white placeholder-gray-400"
@@ -77,10 +116,12 @@ export default function ContactForm() {
                 }`}
               >
                 Email
-              </label> 
+              </label>
               <input
                 type="email"
                 id="email"
+                name="user_email"
+                required
                 className={`w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 ${
                   theme === "dark"
                     ? "bg-gray-800 border-gray-700 text-white placeholder-gray-400"
@@ -101,7 +142,9 @@ export default function ContactForm() {
               </label>
               <textarea
                 id="message"
+                name="message"
                 rows="5"
+                required
                 className={`w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 ${
                   theme === "dark"
                     ? "bg-gray-800 border-gray-700 text-white placeholder-gray-400"
@@ -124,7 +167,7 @@ export default function ContactForm() {
               Send Message
             </motion.button>
           </form>
-        </motion.div> */}
+        </motion.div>
 
         {/* Contact Information */}
         <motion.div
