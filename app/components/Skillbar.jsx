@@ -2,6 +2,9 @@
 import { motion, useInView } from "framer-motion";
 import { useState, useRef } from "react";
 import { useTheme } from "next-themes";
+import { FaReact } from "react-icons/fa";
+import { FaJsSquare } from "react-icons/fa";
+import { RiNextjsFill } from "react-icons/ri";
 
 export default function SkillBar({ skills }) {
   const ref = useRef(null);
@@ -12,17 +15,18 @@ export default function SkillBar({ skills }) {
   // Get appropriate icon based on skill name
   const getSkillIcon = (skillName) => {
     const name = skillName.toLowerCase();
-    if (name.includes("react")) return "/skill-icons/react.png";
-    if (name.includes("javascript")) return "/skill-icons/js.png";
-    if (name.includes("git")) return "/skill-icons/git.png";
-    if (name.includes("next")) return "/skill-icons/next.png";
-    if (name.includes("rest")) return "/skill-icons/rest.png";
-    if (name.includes("sql")) return "/skill-icons/sql.png";
-    if (name.includes("spring")) return "/skill-icons/spring.png";
-    if (name.includes("mongo")) return "/skill-icons/mongo.png";
+    if (name.includes("react")) return "FaReact";
+    if (name.includes("javascript")) return "FaJsSquare";
+    if (name.includes("git")) return "RiNextjsFill";
+    if (name.includes("next")) return "FaReact";
+    if (name.includes("rest")) return "FaReact";
+    if (name.includes("sql")) return "FaReact";
+    if (name.includes("spring")) return "FaReact";
+    if (name.includes("mongo")) return "FaReact";
 
     return "⭐"; // Default icon
   };
+  const Icon = getSkillIcon(skills.name);
 
   // Calculate level category
   const getLevelCategory = (level) => {
@@ -65,10 +69,7 @@ export default function SkillBar({ skills }) {
 
       <div className="flex items-center justify-between mb-3">
         <div className="flex items-center">
-          <img
-            src={getSkillIcon(skills.name)}
-            className="text-xl mr-2 w-10 h-10"
-          />
+          <Icon className="text-xl  mr-2 w-6 h-6" />
           <span
             className={`font-medium ${
               theme === "dark" ? "text-gray-200" : "text-gray-700"
