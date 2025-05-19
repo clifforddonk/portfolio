@@ -10,6 +10,7 @@ import {
   FaEnvelope,
   FaPhone,
   FaMapMarkerAlt,
+  FaWhatsapp,
 } from "react-icons/fa";
 
 export default function ContactForm() {
@@ -23,7 +24,6 @@ export default function ContactForm() {
   }, []);
 
   const handleSubmit = (e) => {
-  
     e.preventDefault();
 
     emailjs
@@ -308,6 +308,19 @@ export default function ContactForm() {
                   aria-label="GitHub"
                 >
                   <FaGithub />
+                </motion.a>
+                <motion.a
+                  href="https://wa.me/233535563779" // WhatsApp link with your number (without + and spaces)
+                  target="_blank"
+                  whileHover={{ y: -3 }}
+                  className={`text-2xl ${
+                    theme === "dark"
+                      ? "text-green-400 hover:text-green-300"
+                      : "text-green-600 hover:text-green-500"
+                  }`}
+                  aria-label="WhatsApp"
+                >
+                  <FaWhatsapp />
                 </motion.a>
               </div>
             </div>
