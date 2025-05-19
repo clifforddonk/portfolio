@@ -77,7 +77,7 @@ export default function Home() {
       category: "fullstack",
       technologies: ["Express", "MongoDB", "JWT", "Docker"],
       link: "https://event-pulse.com/",
-      code: "",
+      code: "https://github.com/charlesbihdev/Event-Pulse",
     },
     {
       id: 6,
@@ -101,7 +101,6 @@ export default function Home() {
     { name: "MongoDB", level: 70 },
     { name: "MySQL", level: 70 },
     { name: "Git", level: 80 },
-    
   ];
 
   const filteredProjects =
