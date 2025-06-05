@@ -169,7 +169,7 @@ export default function Home() {
                       : "bg-gray-100"
                   } h-80 flex items-center justify-center`}
                 >
-                  <img src="/personal/profile.jpg" alt="About Image" />
+                  <img src="/logo/profile.jpg" alt="About Image" />
                 </div>
               </div>
               <div className="md:w-2/3">
