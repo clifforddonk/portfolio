@@ -7,7 +7,7 @@ const Page = () => {
 
   useEffect(() => {
     // Redirect to the login page
-    router.replace("/portfolio");
+    router.replace("/homepage");
   }, [router]);
 
   return null; // Return null instead of an empty fragment
