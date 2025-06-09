@@ -173,7 +173,7 @@ export default function NavBar() {
                   >
                     <a
                       href={href}
-                      className="text-2xl font-medium white hover:text-blue-300 transition-colors relative group"
+                      className="text-2xl font-medium text-white hover:text-blue-300 transition-colors relative group"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       {item}
