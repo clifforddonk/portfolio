@@ -102,12 +102,10 @@ export default function BlogEditor() {
 
   if (!mounted) return null;
 
-    
-
   useEffect(() => {
     const isAuth = localStorage.getItem("blog_auth");
     if (isAuth !== "verified") {
-      router.push("/admin-login");
+      router.push("/blog");
     }
   }, []);
 
