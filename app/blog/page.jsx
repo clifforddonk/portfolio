@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { useTheme } from "next-themes";
 import Link from "next/link";
+import AdminLoginModal from "../components/AdminModal";
 import {
   FaCalendarAlt,
   FaClock,
@@ -19,6 +20,7 @@ export default function BlogPage() {
   const [blogs, setBlogs] = useState([]);
   const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState("");
+  const [isAdminModalOpen, setIsAdminModalOpen] = useState(false);
 
   useEffect(() => {
     setMounted(true);
@@ -280,19 +282,23 @@ export default function BlogPage() {
       </div>
 
       {/* Create Post Button */}
-      {/* <motion.div
+      <motion.div
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.3, delay: 0.5 }}
         className="fixed bottom-8 right-8 z-50"
       >
-        <Link
-          href="/blog/editor"
+        <button
+          onClick={() => setIsAdminModalOpen(true)}
           className="bg-indigo-600 hover:bg-indigo-700 text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-200 flex items-center justify-center w-14 h-14"
         >
           <FaEdit className="text-xl" />
-        </Link>
-      </motion.div> */}
+        </button>
+      </motion.div>
+      <AdminLoginModal
+        isOpen={isAdminModalOpen}
+        onClose={() => setIsAdminModalOpen(false)}
+      />
     </div>
   );
 }
