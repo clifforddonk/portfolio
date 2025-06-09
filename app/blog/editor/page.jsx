@@ -1,5 +1,5 @@
 "use client";
-
+import { useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useTheme } from "next-themes";
@@ -14,6 +14,7 @@ import {
 } from "react-icons/fa";
 
 export default function BlogEditor() {
+  const router = useRouter();
   const { theme } = useTheme();
   const [mounted, setMounted] = useState(false);
   const [title, setTitle] = useState("");
@@ -100,6 +101,15 @@ export default function BlogEditor() {
   };
 
   if (!mounted) return null;
+
+    
+
+  useEffect(() => {
+    const isAuth = localStorage.getItem("blog_auth");
+    if (isAuth !== "verified") {
+      router.push("/admin-login");
+    }
+  }, []);
 
   return (
     <div

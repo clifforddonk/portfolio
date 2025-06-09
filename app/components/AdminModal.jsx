@@ -29,9 +29,9 @@ const AdminLoginModal = ({ isOpen, onClose }) => {
 
       if (response.data.success) {
         // Reset form and close modal
-        setAdminCredentials({ username: "", password: "" });
+        setAdminCredentials({ password: "" });
         onClose();
-
+        localStorage.setItem("blog_auth", "verified");
         // Navigate to admin page
         router.push("/blog/editor");
       } else {
