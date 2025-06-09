@@ -129,7 +129,7 @@ export default function Home() {
       </Head>
 
       {/* Header/Navigation */}
-      <header
+      {/* <header
         className={`${
           theme === "dark"
             ? "bg-gray-800 shadow-gray-900"
@@ -137,7 +137,7 @@ export default function Home() {
         } sticky top-0 z-10`}
       >
         <NavBar />
-      </header>
+      </header> */}
 
       {/* Hero Section */}
       <HeroSection />
@@ -331,7 +331,7 @@ export default function Home() {
       <ContactForm />
 
       {/* Footer */}
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
