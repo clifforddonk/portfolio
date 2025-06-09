@@ -38,7 +38,7 @@ export default function NavBar() {
                   href={href}
                   whileHover={{ y: -3 }}
                   whileTap={{ scale: 0.97 }}
-                  className="text-blue-400 hover:text-blue-300 font-medium relative overflow-hidden group transition-colors px-2 py-1"
+                  className="text-white hover:text-blue-300 font-medium relative overflow-hidden group transition-colors px-2 py-1"
                 >
                   {item}
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-400 group-hover:w-full transition-all duration-300"></span>
@@ -173,7 +173,7 @@ export default function NavBar() {
                   >
                     <a
                       href={href}
-                      className="text-2xl font-medium text-blue-400 hover:text-blue-300 transition-colors relative group"
+                      className="text-2xl font-medium white hover:text-blue-300 transition-colors relative group"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       {item}
