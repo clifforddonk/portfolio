@@ -17,7 +17,7 @@ export async function generateMetadata({ params }) {
 }
 
 export default async function BlogPost({ params }) {
-  const slug = params.slug;
+  const slug = decodeURIComponent(params.slug);
   await dbConnect();
 
   const blog = await Blog.findOne({ slug });
