@@ -13,7 +13,6 @@ export async function POST(request) {
     // Verify credentials
     if (password === adminPassword) {
       return NextResponse.json({ success: true });
-      localStorage.setItem("blog_auth", "verified");
     } else {
       return NextResponse.json({
         success: false,

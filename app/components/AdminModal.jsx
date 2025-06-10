@@ -7,7 +7,6 @@ import { useRouter } from "next/navigation";
 const AdminLoginModal = ({ isOpen, onClose }) => {
   const router = useRouter();
   const [adminCredentials, setAdminCredentials] = useState({
-    username: "",
     password: "",
   });
   const [authError, setAuthError] = useState("");

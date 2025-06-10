@@ -31,6 +31,15 @@ export default function BlogEditor() {
     setMounted(true);
   }, []);
 
+  useEffect(() => {
+    if (!mounted) return;
+
+    const isAuth = localStorage.getItem("blog_auth");
+    if (isAuth !== "verified") {
+      router.push("/blog");
+    }
+  }, [mounted]);
+
   const handleImageUpload = async (e) => {
     const file = e.target.files[0];
     if (!file) return;
@@ -102,13 +111,6 @@ export default function BlogEditor() {
 
   if (!mounted) return null;
 
-  useEffect(() => {
-    const isAuth = localStorage.getItem("blog_auth");
-    if (isAuth !== "verified") {
-      router.push("/blog");
-    }
-  }, []);
-
   return (
     <div
       className={`min-h-screen transition-colors duration-300 ${
@@ -116,7 +118,6 @@ export default function BlogEditor() {
       }`}
     >
       <div className="max-w-5xl mx-auto px-4 py-8">
-        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -178,7 +179,6 @@ export default function BlogEditor() {
         </motion.div>
 
         {!isPreview ? (
-          /* Edit Mode */
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -333,7 +333,6 @@ export default function BlogEditor() {
             </div>
           </motion.div>
         ) : (
-          /* Preview Mode */
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
