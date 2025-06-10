@@ -90,36 +90,100 @@ export default function HeroSection() {
             transition={{ duration: 0.6 }}
             className="relative"
           >
-            <div
-              className={`w-64 h-72 rounded-full p-2 shadow-xl ${
-                theme === "dark"
-                  ? "bg-indigo-900/30 ring-1 ring-indigo-500/20"
-                  : "bg-white/20 backdrop-blur-sm"
-              }`}
-            >
-              <div className="w-full h-full rounded-full overflow-hidden relative">
-                <img
-                  src="/logo/passport pic.jpg"
-                  alt="Clifford Donkor"
-                  className="object-cover w-full h-full"
-                />
+            {/* Main profile container with enhanced styling */}
+            <div className="relative">
+              {/* Animated gradient border */}
+              <motion.div
+                animate={{ rotate: 360 }}
+                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                className={`absolute inset-0 w-64 h-72 rounded-full p-1 ${
+                  theme === "dark"
+                    ? "bg-gradient-to-r from-amber-400 via-orange-500 to-amber-600"
+                    : "bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500"
+                }`}
+              />
+              
+              {/* Inner container */}
+              <div
+                className={`relative w-64 h-72 rounded-full p-2 shadow-2xl ${
+                  theme === "dark"
+                    ? "bg-gray-800"
+                    : "bg-white/95 backdrop-blur-sm"
+                }`}
+              >
+                <div className="w-full h-full rounded-full overflow-hidden relative">
+                  <img
+                    src="/logo/hero.jpg"
+                    alt="Clifford Donkor"
+                    className="object-cover w-full h-full"
+                  />
+                  
+                  {/* Subtle overlay for better contrast */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent" />
+                </div>
               </div>
             </div>
-            {/* Floating decorative elements with dark mode support */}
-            <div
-              className={`absolute -top-4 -right-4 w-12 h-12 rounded-full ${
+
+            {/* Enhanced floating decorative elements */}
+            <motion.div
+              animate={{ 
+                y: [-10, 10, -10],
+                rotate: [0, 5, -5, 0]
+              }}
+              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+              className={`absolute -top-6 -right-6 w-14 h-14 rounded-full shadow-lg ${
                 theme === "dark"
-                  ? "bg-indigo-400 opacity-40"
-                  : "bg-yellow-300 opacity-70"
+                  ? "bg-gradient-to-r from-amber-400 to-orange-500"
+                  : "bg-gradient-to-r from-yellow-400 to-orange-500"
               }`}
-            ></div>
-            <div
-              className={`absolute -bottom-6 -left-6 w-16 h-16 rounded-full ${
+            />
+            
+            <motion.div
+              animate={{ 
+                y: [10, -10, 10],
+                rotate: [0, -5, 5, 0]
+              }}
+              transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+              className={`absolute -bottom-8 -left-8 w-18 h-18 rounded-full shadow-lg ${
                 theme === "dark"
-                  ? "bg-purple-500 opacity-30"
-                  : "bg-indigo-300 opacity-60"
+                  ? "bg-gradient-to-r from-orange-500 to-red-500"
+                  : "bg-gradient-to-r from-orange-500 to-pink-500"
               }`}
-            ></div>
+            />
+            
+            {/* Additional small floating elements */}
+            <motion.div
+              animate={{ 
+                scale: [1, 1.2, 1],
+                opacity: [0.7, 1, 0.7]
+              }}
+              transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+              className={`absolute top-20 -left-4 w-8 h-8 rounded-full ${
+                theme === "dark"
+                  ? "bg-amber-300/60"
+                  : "bg-yellow-300/80"
+              }`}
+            />
+            
+            <motion.div
+              animate={{ 
+                scale: [1, 1.3, 1],
+                opacity: [0.6, 1, 0.6]
+              }}
+              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+              className={`absolute bottom-20 -right-2 w-6 h-6 rounded-full ${
+                theme === "dark"
+                  ? "bg-orange-400/50"
+                  : "bg-orange-400/70"
+              }`}
+            />
+
+            {/* Subtle glow effect */}
+            <div className={`absolute inset-0 w-64 h-72 rounded-full blur-xl opacity-20 ${
+              theme === "dark"
+                ? "bg-gradient-to-r from-amber-400 to-orange-500"
+                : "bg-gradient-to-r from-yellow-400 to-orange-500"
+            }`} />
           </motion.div>
         </div>
       </div>
