@@ -11,6 +11,28 @@ export const Projects = () => {
   const projects = [
     {
       id: 1,
+      title: "SkyGuard - Airforce Quiz System",
+      description:
+        "The Airforce Quiz System is a Next.js-based learning management platform that allows Students to take quizzes on aviation safety topics and submit group assignments. Admins can also manage questions, view results, and grade group submissions.",
+      image: "/projects/skyguard.png",
+      category: "fullstack",
+      technologies: ["Next.js"],
+      link: "https://skyyguard.vercel.app/",
+      code: "https://github.com/clifforddonk/airforce-exam-system",
+    },
+    {
+      id: 2,
+      title: "Task Tracker",
+      description:
+        "A simple, powerful task management system designed for teams. Track progress, assign tasks, and collaborate seamlessly.",
+      image: "/projects/tasktracker.png",
+      category: "fullstack",
+      technologies: ["Django Rest Framework", "React"],
+      link: "https://paymaster-task-tracker.vercel.app/",
+      code: "https://github.com/clifforddonk/task_tracker_frontend",
+    },
+    {
+      id: 3,
       title: "Byteblogg",
       description:
         "A dynamic blog platform built for seamless content publishing and user engagement.",
@@ -21,7 +43,7 @@ export const Projects = () => {
       code: "https://github.com/clifforddonk/blogsite_backend",
     },
     {
-      id: 2,
+      id: 4,
       title: "African Youth Festival Portal",
       description:
         "Application portal for the Africa Youth Festival 2025, designed for a smooth and intuitive registration experience.",
@@ -32,7 +54,7 @@ export const Projects = () => {
       code: "https://github.com/charlesbihdev/ayf-portal",
     },
     {
-      id: 3,
+      id: 5,
       title: "ChoDelivery",
       description:
         "A modern food delivery system offering an efficient and responsive ordering experience.",
@@ -43,7 +65,7 @@ export const Projects = () => {
       code: "https://github.com/charlesbihdev/cho",
     },
     {
-      id: 4,
+      id: 6,
       title: "Mattress Home",
       description:
         "An e-commerce platform tailored for mattress and bedding products, designed to provide a cozy shopping journey.",
@@ -54,7 +76,7 @@ export const Projects = () => {
       code: "https://github.com/charlesbihdev/MATTRESS-HOME",
     },
     {
-      id: 5,
+      id: 7,
       title: "Event-Pulse",
       description:
         "A full-featured event management and ticketing platform with robust backend architecture and user authentication.",
@@ -65,16 +87,29 @@ export const Projects = () => {
       code: "https://github.com/charlesbihdev/Event-Pulse",
     },
     {
-      id: 6,
-      title: "Portfolio Website",
+      id: 8,
+      title: "Personal Portfolio",
       description:
         "A sleek and responsive personal portfolio showcasing my projects, skills, and journey as a developer.",
       image: "/projects/port.png",
       category: "frontend",
-      technologies: ["Next.js", "Tailwind CSS"],
+      technologies: ["Next.js"],
       link: "https://clifforddonk.vercel.app/",
       code: "https://github.com/clifforddonk/portfolio",
     },
+
+    // {
+    //   id: 9,
+    //   title: "Employee Directory",
+    //   description:
+    //     "An intuitive employee directory application that allows users to search, filter, and view detailed profiles of employees within an organization.",
+    //   image: "/projects/employee-directory.png",
+    //   category: "fullstack",
+    //   technologies: ["Laravel", "React", "CodeIgniter", "Inertia.js"],
+
+    //   code: "https://github.com/Sametro-PayMaster/employee-directory",
+
+    // },
   ];
 
   const filteredProjects =
